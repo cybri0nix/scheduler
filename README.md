@@ -228,6 +228,6 @@ Scheduler.updateSchedule(
 
 
 ## Приложения написанные с Sheduler + YaSchool:
-#### Расписание занятий Яндекс школ. 
+#### Расписание занятий Яндекс школ (сохранение в localStorage, рендеринг на Vuejs). 
 * Демо: https://cybri0nix.github.io/ya-mobilization/ 
 * Исходный код: https://github.com/cybri0nix/ya-mobilization
