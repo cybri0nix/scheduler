@@ -1,19 +1,16 @@
 # Scheduler
 
-Библиотека для работы с расписанием лекций.
-
-
-![GitHub Logo](/images/logo.png)
-Format: ![Alt Text](url)
+[Scheduler.js](https://github.com/cybri0nix/scheduler/blob/master/libs/scheduler.js) - Библиотека для работы с расписанием лекций. Рядом с ней вы найдете реализацию библиотеки работы со справочниками лекций, лекторов, школ и аудиторий ([YaSchool](https://github.com/cybri0nix/scheduler/blob/master/libs/yaschool.js)).
 
 
 
 ## Возможности
 
-### Запланировать лекцию
+#### Запланировать лекцию
 
 
-## Пример использования
+## Быстрый старт
+### Для начала необходимо иннициализировать библиотеку
 
 * item
 * item
