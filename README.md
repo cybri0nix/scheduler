@@ -9,7 +9,7 @@
 
 ## Быстрый старт
 ### Иннициализация библиотеки
-```
+```javascript
 Scheduler.init({
 	data: scheduleData,
 	directories: directoriesData
@@ -31,7 +31,7 @@ Scheduler.init({
 ```
 
 **Сруктура объекта scheduleData** (одномерный массив объектов):
-```
+```javascript
 // Это массив объектов
 var scheduleData = [  
   { _models.schedule_ },
@@ -43,7 +43,7 @@ var scheduleData = [
 
 **Структура объекта _models.schedule_**. Каждый такой обект содержит информацию о запланированной лекции:
 
-```
+```javascript
 {
 	"_id": null, // string unique hash
 	"plannedDateTime": null, // int дата и время начала лекции в секундах
@@ -62,7 +62,7 @@ var scheduleData = [
 
 
 **Структура объекта directoriesData**. Объект содержит:
-```
+```javascript
 {
   "schools"	: { _YaSchool.models.school_ }, // Справочник школ
   "rooms"	: { _YaSchool.models.room_ }, // Справочник аудиторий
@@ -74,7 +74,7 @@ var scheduleData = [
 В исходном коде [YaSchool](https://github.com/cybri0nix/scheduler/blob/master/libs/yaschool.js) вы найдете описание моделей 
 
 **_YaSchool.models.school_** . Это объект, который описывает школу:
-```
+```javascript
 {
 	"_id"		: null, // string unique hash
 	"title"		: "", // string - Полное название школы
@@ -84,7 +84,7 @@ var scheduleData = [
 ```
 
 **_YaSchool.models.room_** . Это объект, который описывает аудиторию:
-```
+```javascript
 {
 	"_id"		: null, // string unique hash
 	"title"		: "", // string - название аудитории
@@ -94,7 +94,7 @@ var scheduleData = [
 ```
 
 **_YaSchool.models.lesson_** . Это объект, который описывает лекцию:
-```
+```javascript
 {
 	"_id"	: null, // string unique hash
 	"title"	: "" // Название лекции
@@ -102,7 +102,7 @@ var scheduleData = [
 ```
 
 **_YaSchool.models.lecturer_** . Это объект, который описывает лектора:
-```
+```javascript
 {
 	"_id"	: null, // string unique hash
 	"name"	: "", // 
@@ -116,11 +116,11 @@ var scheduleData = [
 
 ## Возможности
 #### Библиотека оперирует секундами (например в аргументах, при планировании лекуий), поэтому удобно использовать метод перевода человекопонятной даты в секунды:
-```
+```javascript
 Scheduler.toSeconds('22-04-2017-19:00'); // ДД-ММ-ГГГГ-ЧЧ:ММ - вернут секунды (unixtime)
 ```
 ### Узнать название ошибки по коду:
-```
+```javascript
 Scheduler.ERRORS.getErrorName(result.errorCode); 
 ```
 **Названия ошибок:**
@@ -143,7 +143,7 @@ _Ошибки целостности данных, при доабвлении �
 
 
 ### Запланировать лекцию
-```
+```javascript
 addSchedule(secondsLessonBegin, secondsLessonDuration, scheduleData[, callback])
 ```
 * int **secondsLessonBegin**    	- Дата и время начала лекци в секундах
@@ -156,7 +156,7 @@ boolean: true - успешно создано, false не создано
 
 ##### Пример:
 
-```
+```javascript
 Scheduler.addSchedule(
 	Scheduler.toSeconds('22-04-2017-19:00'), // 22 апреля 2017 в 19:00
 	3600, // Продолжительность лекции - 1 час
@@ -179,7 +179,7 @@ Scheduler.addSchedule(
 
 
 ### Удалить лекцию
-```
+```javascript
 removeScheduleById((id [, callback])
 ```
 
@@ -191,13 +191,13 @@ boolean: true - удалено, false - не удалено
 
 ##### Пример:
 
-```
+```javascript
 Scheduler.removeScheduleById("5f7fa37e-e578-f2bd-edaf-8abeece7d604", myCallbackFunction);
 ```
 
 
 ### Обновление пункта в расписании
-```
+```javascript
 updateSchedule: function(id, scheduleData [, callback])
 ```
 * string **id** - id пункта в расписании
@@ -206,7 +206,7 @@ updateSchedule: function(id, scheduleData [, callback])
 _Вернет тоже что и addSchedule_
 
 ##### Пример:
-```
+```javascript
 Scheduler.updateSchedule(
 	"5f7fa37e-e578-f2bd-edaf-8abeece7d604", // id пункта в расписании
 	{
