@@ -117,4 +117,6 @@ var scheduleData = [
 ```
 
 ## Приложения написанные с Sheduler + YaSchool:
-* Расписание занятий Яндекс школ https://github.com/cybri0nix/ya-mobilization
+#### Расписание занятий Яндекс школ. 
+* Демо: https://cybri0nix.github.io/ya-mobilization/ 
+* Исходный код: https://github.com/cybri0nix/ya-mobilization
