@@ -2,6 +2,10 @@
 
 [Scheduler.js](https://github.com/cybri0nix/scheduler/blob/master/libs/scheduler.js) - Библиотека для работы с расписанием лекций. Рядом с ней вы найдете реализацию библиотеки работы со справочниками лекций, лекторов, школ и аудиторий. Реализация может быть любой, главное чтобы структура данных была "понятной" для Scheduler'а ([YaSchool](https://github.com/cybri0nix/scheduler/blob/master/libs/yaschool.js)).
 
+## Структура данных:
+![Смотреть](https://github.com/cybri0nix/scheduler/blob/master/data-tructure.png)
+
+
 
 ## Быстрый старт
 ### Иннициализация библиотеки
