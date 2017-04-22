@@ -125,19 +125,19 @@ Scheduler.ERRORS.getErrorName(result.errorCode);
 ```
 **Названия ошибок:**
 _Служебные ошибки_
-* DATA_REQUIRED - 900
-* YASCHOOL_DIRECTORIES_NOT_BINDED - 901
+* DATA_REQUIRED - 900 - объект data не подключен, см. Scheduler.init({ ... })
+* YASCHOOL_DIRECTORIES_NOT_BINDED - 901 - объект со справочниками (directories) не подключен см. Scheduler.init({ ... })
 
 _Ошибки целостности данных, при доабвлении или изменении пункта в расписании_
-* LESSON_ALREADY_PLANNED_IN_THIS_ROOM_AT_THIS_TIME - 1000
-* LESSON_ALREADY_PLANNED_FOR_THIS_SCHOOL_AT_THIS_TIME - 1001
-* TOO_MANY_STUDENTS_FOR_ROOM - 1002
-* LECTURER_CANNOT_BE_IN_SEVERAL_ROOMS_AT_THE_SAME_TIME - 1003
-* UNKNOWN_SCHOOL - 1004
-* UNKNOWN_LESSON - 1005
-* UNKNOWN_ROOM - 1006
-* UNKNOWN_LECTURER - 1007
-* ITEM_NOT_FOUND - 1008
+* LESSON_ALREADY_PLANNED_IN_THIS_ROOM_AT_THIS_TIME - 1000 - Лекция уже запланирована в этой Аудитории на эту ДатуВремя
+* LESSON_ALREADY_PLANNED_FOR_THIS_SCHOOL_AT_THIS_TIME - 1001 - Лекция уже запланирована для этой школы в эту ДатуВремя
+* TOO_MANY_STUDENTS_FOR_ROOM - 1002 - Недостаточно мест в аудитории для проведения лекции
+* LECTURER_CANNOT_BE_IN_SEVERAL_ROOMS_AT_THE_SAME_TIME - 1003 - Лектор не может быть одновременно в нескольких аудиториях одновременно (в ук. ДатаВремя)
+* UNKNOWN_SCHOOL - 1004 - школа не найдена (должна быть в справочнике)
+* UNKNOWN_LESSON - 1005 - лекция не найдена
+* UNKNOWN_ROOM - 1006 - аудитория не найдена
+* UNKNOWN_LECTURER - 1007 - лектор не найден
+* ITEM_NOT_FOUND - 1008 - элемент не найден (например, при обновлении)
 
 Коды/Названия ошибок можно получить отсюда: Scheduler.ERRORS ({errname:code}
 
