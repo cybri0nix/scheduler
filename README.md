@@ -227,6 +227,54 @@ Scheduler.updateSchedule(
 );
 ```
 
+
+### Получить расписание для школы (сгруппированное по месяцу и дню )
+
+```javascript
+Scheduler.getTreeScheduleBySchool("schoolId") //получить все расписание для указанной школы
+Scheduler.getTreeScheduleBySchool("schoolId", <secondsFrom>) //получить расписание для указанной школы начиная с ДатаВремя (секунды)
+Scheduler.getTreeScheduleBySchool("schoolId", <secondsFrom>, <secondsTo>) //получить расписание для указанной школы начиная с ДатаВремя (секунды) по ДатаВремя (секунды)
+```
+
+##### Пример использования
+```javascript
+// Получить, сгруппированное по месяцу и дню расписание, для школы school1 c 1 апреля по 16 апреля
+Scheduler.getTreeScheduleBySchool("school1", Scheduler.toSeconds('01-04-2017-19:00'), Scheduler.toSeconds('16-04-2017-19:00'));
+
+// Получить, сгруппированное по месяцу и дню все расписание, для школы school1 c 1 апреля
+Scheduler.getTreeScheduleBySchool("school1", Scheduler.toSeconds('01-04-2017-19:00') );
+
+Получить, сгруппированное по месяцу и дню все расписание, для школы school1
+Scheduler.getTreeScheduleBySchool("school1");
+
+
+```
+
+#####  Получить расписание для школы (линейное расписание без группировки, массив объектов)
+```javascript
+array Scheduler.getPlainScheduleBySchool(string schoolId, int secondsFrom, int secondsTo); // Параметры такие же как у getTreeScheduleBySchool, но вернет одноверный масив объектов _schedule_
+```
+
+
+
+##### Получить расписание для аудитории в заданном диапазоне дат, сгруппированное по месяцу и дате
+```javascript
+object Scheduler.getTreeScheduleByRoom(string roomId, int secondsFrom, int secondsTo);
+```
+
+
+##### Получить линейное расписание для аудитории в заданном диапазоне дат
+```javascript
+array Scheduler.getPlainScheduleByRoom(string roomId, int secondsFrom, int secondsTo);
+```
+
+##### Получить данные пункта в расписании по ID
+```
+// Scheduler.findScheduleById("scheduleId"); // Вернет объект расписания (_schedule_), -1 - если не найдено
+var foundScheduleItem = Scheduler.findScheduleById("5f7fa37e-e578-f2bd-edaf-8abeece7d604");
+```
+
+
 ### TODO:
 * Обработка исключительных ситуауий
 * Тесты
