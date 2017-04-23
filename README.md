@@ -231,6 +231,7 @@ Scheduler.updateSchedule(
 * Обработка исключительных ситуауий
 * Тесты
 * YaSchool - update/remove items
+* Полноценный пример использования с терминалом
 
 
 ## Приложения написанные с Sheduler + YaSchool:
