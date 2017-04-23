@@ -244,7 +244,7 @@ Scheduler.getTreeScheduleBySchool("school1", Scheduler.toSeconds('01-04-2017-19:
 // Получить, сгруппированное по месяцу и дню все расписание, для школы school1 c 1 апреля
 Scheduler.getTreeScheduleBySchool("school1", Scheduler.toSeconds('01-04-2017-19:00') );
 
-Получить, сгруппированное по месяцу и дню все расписание, для школы school1
+// Получить, сгруппированное по месяцу и дню все расписание, для школы school1
 Scheduler.getTreeScheduleBySchool("school1");
 
 
@@ -269,7 +269,7 @@ array Scheduler.getPlainScheduleByRoom(string roomId, int secondsFrom, int secon
 ```
 
 ##### Получить данные пункта в расписании по ID
-```
+```javascript
 // Scheduler.findScheduleById("scheduleId"); // Вернет объект расписания (_schedule_), -1 - если не найдено
 var foundScheduleItem = Scheduler.findScheduleById("5f7fa37e-e578-f2bd-edaf-8abeece7d604");
 ```
