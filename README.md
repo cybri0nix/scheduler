@@ -227,6 +227,10 @@ Scheduler.updateSchedule(
 );
 ```
 
+### TODO:
+* Обработка исключительных ситуауий
+* Тесты
+* YaSchool - update/remove items
 
 
 ## Приложения написанные с Sheduler + YaSchool:
